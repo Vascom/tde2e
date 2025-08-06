@@ -31,12 +31,13 @@ BuildRequires: ninja-build
 TDE2E is a cross-platform library for building Telegram clients.
 
 %package devel
-Summary: Development files for %{name}
+Summary: Cross-platform library for building Telegram clients
 Provides:   %{name}-static = %{?epoch:%{epoch}:}%{version}-%{release}
 Conflicts:  tdlib-devel
 
 %description devel
 TDE2E is a cross-platform library for building Telegram clients.
+Contains development files and static libraries.
 
 %prep
 %autosetup -n td-%{commit} -p1
