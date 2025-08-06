@@ -8,7 +8,9 @@ Name: tde2e
 Version: 1.8.51
 Release: %autorelease
 
-License: BSL-1.0
+# BSL-1.0 - main code
+# GPL-2.0-or-later AND LGPL-2.1-or-later - tl-parser code
+License: BSL-1.0 AND GPL-2.0-or-later AND LGPL-2.1-or-later
 URL: https://github.com/tdlib/td
 Summary: Cross-platform library for building Telegram clients
 Source0: %{url}/archive/%{commit}/tdlib-%{version}.tar.gz
@@ -34,7 +36,7 @@ Provides:   %{name}-static = %{?epoch:%{epoch}:}%{version}-%{release}
 Conflicts:  tdlib-devel
 
 %description devel
-%{summary}.
+TDE2E is a cross-platform library for building Telegram clients.
 
 %prep
 %autosetup -n td-%{commit} -p1
