@@ -30,6 +30,8 @@ TDE2E is a cross-platform library for building Telegram clients.
 
 %package devel
 Summary: Development files for %{name}
+Provides:   %{name}-static = %{?epoch:%{epoch}:}%{version}-%{release}
+Conflicts:  tdlib-devel
 
 %description devel
 %{summary}.
@@ -55,7 +57,7 @@ Summary: Development files for %{name}
 
 %files devel
 %license LICENSE_1_0.txt
-%doc README.md CHANGELOG.md
+%doc README.md
 %{_includedir}/td/
 %{_libdir}/cmake/%{name}/
 %{_libdir}/pkgconfig/td*.pc
